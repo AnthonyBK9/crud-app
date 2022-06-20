@@ -47,8 +47,8 @@ function App() {
   return (
     <div className="container">
       <div className="App">
-        <div className="container-list ">
-          <table>
+        <div className="container-list">
+          <table className="table">
             <thead>
               <tr>
                 <th>Name</th><th>E-mail</th><th>Birthday</th><th>Action</th>
