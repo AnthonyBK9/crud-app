@@ -44,7 +44,7 @@ const UsersForm = ({createUser, updateUserById, userUpdate, register, handleSubm
             <input type="date" id="date" {...register('birthday')}/>
         </div>
         <div>
-            <button className="btn-create">Add <i class="fa-solid fa-plus"></i></button>
+            <button className="btn-create">{userUpdate !== undefined ? 'Update': 'Add'} <i className="fa-solid fa-plus"></i></button>
         </div>
     </form>
   )

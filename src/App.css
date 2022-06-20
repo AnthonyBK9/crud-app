@@ -2,47 +2,104 @@
 
 .App {
   text-align: center;
+  display: flex;
 }
 
-.container-card {
+/* Lista de usuario */
+
+.container-list {
+  height: 100vh;
+  overflow-x: auto;
+  padding: 30px;
+  width: 60%;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
-.card {
-  background: rgb(200, 202, 201);
-  width: 27%;
-  margin: 5px 0;
-  border-radius: 5px;
-}
-
-.card-header {
-  background: rgb(7, 91, 99);
-  border-radius: 5px 5px 0 0;
-
-}
-
-.card-title {
-  color: rgb(255, 255, 255);
-  font-family: 'Poppins', sans-serif;
-}
-
-.card-body {
-  color: rgb(9, 77, 72);
+table {	
+  width: 90%;
+  background: white;
   text-align: left;
-  padding: 0 20px;
+  border-collapse: collapse;
 }
 
-.card-body p {
-  margin: 5px 0;
+th, td {
+  padding: 10px;
 }
 
-.card-body span {
-  font-weight: bold;
-  color: #282624;
+td {
+  border: 1px solid rgba(122, 122, 122, 0.171);
 }
+
+thead {
+  background:#106a72;
+  border-bottom: 5px solid #07383b;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background: #ddd;
+}
+
+tr:hover td{
+  background: #138691;
+  color: white;
+}
+
+/* Formulario */
+
+.container-form {
+  background: #037ba0;
+  /* background-image: url('https://fondosmil.com/fondo/18872.png');
+  background-size: cover; */
+  color: #fff;
+  height: 100vh;
+  width: 40%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 90%;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.input-name {
+  width: 90%;
+}
+
+.input i {
+  font-size: 20px;
+}
+
+.input-name {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.container-form .input input {
+  background: rgb(255, 253, 253);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  padding: 10px;
+  width: 90%;
+}
+
+/* Botones */
 
 .btn-delete {
   background: #b82424;
@@ -85,43 +142,4 @@
   color: #faebd7;
   font-size: 15px;
   font-weight: bold;
-}
-
-.container-form {
-  background: #0e192e;
-  color: #fff;
-  height: 100vh;
-  /* overflow-x: auto; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 10px 0;
-  width: 100%;
-}
-
-.input i {
-  font-size: 20px;
-}
-
-.input-name {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-.container-form .input input {
-  background: rgb(255, 253, 253);
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  outline: none;
-  padding: 10px;
-  width: 90%;
 }

@@ -22,21 +22,13 @@ const UsersList = ({user, URL, getUsers, setUserUpdate, reset}) => {
         setUserUpdate(user)
     }
   return (
-    <article className="card">
-        <div className="card-content">
-            <div className="card-header">
-                <h3 className="card-title"><i className="fa-solid fa-user-large"></i> {user.first_name} {user.last_name}</h3>
-            </div>
-            <div className="card-body">
-                <p><span><i className="fa-solid fa-cake-candles"></i> Birthday:</span> {user.birthday}</p>
-                <p><span><i className="fa-solid fa-envelope"></i> E-mail: </span> {user.email}</p>
-            </div>
-            <div className="card-button">
-                <button className="btn-delete" onClick={() => deleteUser(user.id)}><i className="fa-solid fa-trash-can"></i></button>
-                <button className="btn-edit" onClick={updateUser}><i className="fa-solid fa-user-pen"></i></button>
-            </div>
-        </div>
-    </article>
+    <tr>
+        <td>{user.first_name} {user.last_name}</td>
+        <td>{user.email}</td><td>{user.birthday}</td>
+        <td><button className="btn-delete" onClick={() => deleteUser(user.id)}><i className="fa-solid fa-trash-can"></i></button>
+            <button className="btn-edit" onClick={updateUser}><i className="fa-solid fa-user-pen"></i></button>
+        </td>
+    </tr>      
   )
 }
 

@@ -37,8 +37,7 @@ function App() {
 
   const updateUserById = (id, updateUser) => {
     axios.patch(`${URL}${id}/`, updateUser)
-      .then(res => {
-        console.log(res.data)
+      .then(() => {
         getUsers()
         setUserUpdate()
       })
@@ -47,9 +46,29 @@ function App() {
 
   return (
     <div className="container">
-      <div className="row App">
-        <div className="container-card col-md-8">
-          {
+      <div className="App">
+        <div className="container-list ">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th><th>E-mail</th><th>Birthday</th><th>Action</th>
+              </tr>
+            </thead>
+            {
+              users?.map(user => (
+                <UsersList 
+                  user={user}
+                  key={user.id}
+                  URL={URL}
+                  getUsers={getUsers}
+                  updateUserById={updateUserById}
+                  setUserUpdate={setUserUpdate}
+                  reset={reset}
+                />
+              ))
+            }
+          </table>
+          {/* {
             users?.map(user => (
               <UsersList 
                 user={user}
@@ -61,9 +80,9 @@ function App() {
                 reset={reset}
               />
             ))
-          }
+          } */}
         </div>
-        <div className="container-form col-md-4">
+        <div className="container-form ">
           <UsersForm 
             createUser={createUser}
             updateUserById={updateUserById}

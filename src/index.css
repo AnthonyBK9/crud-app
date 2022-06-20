@@ -11,11 +11,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0093E9;
+  background-image: url('http://wallpapers4screen.com/Temp/20-6-2022/lines-stripes-geometric-figures-lollipop-geometry-wallpapers4screen.com-2048x1536.jpg');
+  background-size: cover;
+  /* background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 code {
