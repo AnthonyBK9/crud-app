@@ -22,14 +22,21 @@ const UsersList = ({user, URL, getUsers, setUserUpdate, reset}) => {
         setUserUpdate(user)
     }
   return (
-    <tr>
-        <td data-label="name">{user.first_name} {user.last_name}</td>
-        <td data-label="email">{user.email}</td>
-        <td data-label="birthday">{user.birthday}</td>
-        <td data-label="action"><button className="btn-delete" onClick={() => deleteUser(user.id)}><i className="fa-solid fa-trash-can"></i></button>
-            <button className="btn-edit" onClick={updateUser}><i className="fa-solid fa-user-pen"></i></button>
-        </td>
-    </tr>      
+    <div className="list">
+      <div className="list-user">
+          <h2 className="list-name">{user.first_name} {user.last_name}</h2>
+      </div>
+      <div className="list-info">
+        <div>
+          <p className="list-content"><span className="list-title">Email:</span>{user.email}</p>
+          <p className="list-content"><span className="list-title">Birthday:</span>{user.birthday}</p>
+        </div>
+        <div className="btn-list">
+          <button className="btn-delete" onClick={() => deleteUser(user.id)}><i className="fa-solid fa-trash-can"></i></button>
+          <button className="btn-edit" onClick={updateUser}><i className="fa-solid fa-user-pen"></i></button>
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -48,27 +48,7 @@ function App() {
     <div className="container">
       <div className="App">
         <div className="container-list">
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Name</th><th>E-mail</th><th>Birthday</th><th>Action</th>
-              </tr>
-            </thead>
-            {
-              users?.map(user => (
-                <UsersList 
-                  user={user}
-                  key={user.id}
-                  URL={URL}
-                  getUsers={getUsers}
-                  updateUserById={updateUserById}
-                  setUserUpdate={setUserUpdate}
-                  reset={reset}
-                />
-              ))
-            }
-          </table>
-          {/* {
+          {
             users?.map(user => (
               <UsersList 
                 user={user}
@@ -80,7 +60,7 @@ function App() {
                 reset={reset}
               />
             ))
-          } */}
+          } 
         </div>
         <div className="container-form ">
           <UsersForm 

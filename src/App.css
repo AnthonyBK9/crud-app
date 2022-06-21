@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Heebo:wght@300;400;700&family=Kanit:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Staatliches&family=Ubuntu:wght@300;400;700&display=swap');
 .App {
   text-align: center;
   display: flex;
@@ -15,33 +14,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  gap: 10px;
 }
 
-.table {	
-  width: 90%;
-  background: white;
+.list {
+  margin-bottom: 10px;
+  background: #fff;
+  width: 100%;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.list-user {
   text-align: left;
-  border-collapse: collapse;
+  border-bottom: 2px solid #037ba0;
 }
 
-th, td {
-  padding: 10px;
+.list-name {
+  margin-left: 10px;
+  color: rgb(10, 57, 78);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
 }
 
-thead {
-  background:#106a72;
-  border-bottom: 5px solid #07383b;
-  color: #fff;
-  text-transform: uppercase;
+.list-info {
+  /* background:#1e6ca3; */
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-tr:nth-child(even) {
-  background: #ddd;
+.list-content {
+  margin: 10px 0px;font-size: 20px;
 }
 
-tr:hover td{
-  background: #138691;
-  color: white;
+.list-title {
+  font-weight: bold;
+  color: rgb(6, 75, 80);
+  margin-right: 10px;
+}
+
+.btn-list {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 /* Formulario */
@@ -130,14 +154,13 @@ tr:hover td{
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
-  width: 20%;
 }
 
 .btn-create:hover {
   background: #10a058;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .container-form {
     padding: 15px 0 35px;
     width: 100%;
@@ -183,4 +206,4 @@ tr:hover td{
     float: left;
   }
 
-}
+} */
