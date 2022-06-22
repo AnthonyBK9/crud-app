@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const Users = () => {
 
     const [users, setUsers] = useState()
-    const URL = 'http://users-crud1.herokuapp.com/users/'
+    const URL = 'https://users-crud1.herokuapp.com/users/'
     
     useEffect(() => {
       axios.get(URL)

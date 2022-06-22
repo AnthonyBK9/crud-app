@@ -5,7 +5,7 @@ import UsersForm from './components/UsersForm';
 import UsersList from './components/UsersList';
 import { useForm } from 'react-hook-form';
 
-const URL = 'http://users-crud1.herokuapp.com/users/'
+const URL = 'https://users-crud1.herokuapp.com/users/'
 function App() {
 
   const { register, handleSubmit, reset } = useForm();
