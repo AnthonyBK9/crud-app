@@ -45,6 +45,12 @@ const UsersForm = ({createUser, updateUserById, userUpdate, register, handleSubm
         </div>
         <div>
             <button className="btn-create">{userUpdate !== undefined ? 'Update': 'Add'} <i className="fa-solid fa-plus"></i></button>
+            {
+                userUpdate !== undefined ?
+                <button className="btn-delete-button">Cancel</button> 
+                : ''
+            }
+            
         </div>
     </form>
   )

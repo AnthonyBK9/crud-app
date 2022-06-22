@@ -160,6 +160,23 @@
   background: #10a058;
 }
 
+.btn-delete-button {
+  background: #87241f;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 3px;
+  margin: 5px 8px;
+  color: #faebd7;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-delete-button:hover {
+  background: #b6342d;
+}
+
 /* @media screen and (max-width: 768px) {
   .container-form {
     padding: 15px 0 35px;
